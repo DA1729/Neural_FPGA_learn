@@ -1,4 +1,4 @@
-# Neural_FPGA_learn
+# Neural Processing Unit
 
 I am following a lecture series by Vipin Kizheppatt on implement Neural Networks on FPGA. Here is the link to the first lecture: [Neural Network on FPGA](https://www.youtube.com/watch?v=rw_JITpbh3k).
 

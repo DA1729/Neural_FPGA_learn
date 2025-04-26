@@ -1,6 +1,6 @@
 # Neural Processing Unit
 
-This repository contains the design and implementation of a Neural Processing Unit (NPU), which is being developed as part of an ongoing project. Inspired by the ![YouTube series](https://youtu.be/rw_JITpbh3k?si=NpORJeerbtGdDd0W) by Vipin Kizheppatt, the goal of this project is to create a custom hardware accelerator for neural networks. While the initial concept is based on the series, many customizations and optimizations are being implemented to improve functionality and adaptability.
+This repository contains the design and implementation of a Neural Processing Unit (NPU), which is being developed as part of an ongoing project. Inspired by the [YouTube series](https://youtu.be/rw_JITpbh3k?si=NpORJeerbtGdDd0W) by Vipin Kizheppatt, the goal of this project is to create a custom hardware accelerator for neural networks. While the initial concept is based on the series, many customizations and optimizations are being implemented to improve functionality and adaptability.
 
 This is an ongoing project, and several modules are still in development. As such, expect incomplete features and evolving designs.
 

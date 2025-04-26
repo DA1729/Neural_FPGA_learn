@@ -35,7 +35,7 @@ module weight_memory #(
                 begin
                     write_add <= {address_bits{1'b1}};    // sets the address value to the last memory location, cuz when i'll add 1 to it, it will go back to all 0s 
                     write_en <= 0;
-                    
+
                     integer i;
                     for (i = 0; i < num_weights; i = i + 1) begin
                         memory[i] <= '0;
@@ -47,7 +47,7 @@ module weight_memory #(
                 end
 
                 end
-            end
+            end 
 
         `endif 
 

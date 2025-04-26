@@ -49,7 +49,7 @@ module weight_memory_control #(
 
                 else if(weight_valid & (config_layer_no == layer_no) & (config_neuron_no == neuron_no))
                 begin
-                    weight_in <= weight_value[data_bits-1:0];
+                    weight_in_16bit <= weight_value[data_bits-1:0];
                     write_add <= write_add + 1;
                     write_en <= 1;
                 end

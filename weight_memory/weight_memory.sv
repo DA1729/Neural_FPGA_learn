@@ -3,7 +3,7 @@
 
 module weight_memory #(
     data_bits = 16,             // the data width, in this case 16 bits
-    num_weights = 3,            // number of weights (i have a doubt in this one for now but let's just go with this one now)
+    num_weights = 784,            // number of weights (i have a doubt in this one for now but let's just go with this one now)
     address_bits = 10,          // no way to address with 9 bits lol
     weight_file = "pretrained_weights.mif"
 ) (
@@ -33,6 +33,9 @@ module weight_memory #(
                 // check for reset switch, if reset is on, initialize all the weight values to 0
                 if (reset)
                 begin
+                    write_add <= {address_bits{1'b1}};    // sets the address value to the last memory location, cuz when i'll add 1 to it, it will go back to all 0s 
+                    write_en <= 0;
+                    
                     integer i;
                     for (i = 0; i < num_weights; i = i + 1) begin
                         memory[i] <= '0;
@@ -56,11 +59,6 @@ module weight_memory #(
             begin
                 weight_out <= memory[read_add];
             end
-
-            else
-            begin
-                weight_out <= 16'b0;        // assigns 0 if read is not enabled
-            end 
         end
         
     

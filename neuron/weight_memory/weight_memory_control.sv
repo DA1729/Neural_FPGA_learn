@@ -20,7 +20,7 @@ module weight_memory_control #(
 
     // input parameters for reading weight values
     input logic neuron_in_valid,        // validity of the neuron's input
-    output logic output_valid,           // validity of the neuron's output
+    input logic output_valid,           // validity of the neuron's output
 
     output logic [data_bits-1:0] weight_out
 );

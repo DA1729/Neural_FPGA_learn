@@ -39,10 +39,17 @@ module weight_multiplication #(
         .weight_out(weight_out)
     );
 
-    always_ff @(posedge clk) begin
-        if (neuron_in_valid) begin
-            mul_out <= $signed(neuron_input) * $signed(weight_out);
-        end
+    logic [data_bits-1:0] neuron_input_reg;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            neuron_input_reg <= '0;
+        else if (neuron_in_valid)
+            neuron_input_reg <= neuron_input;
+    end
+
+    always @(posedge clk) begin
+        mul_out <= $signed(neuron_input_reg) * $signed(weight_out);
     end
 
 endmodule

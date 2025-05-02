@@ -1,4 +1,4 @@
-`include "./../weight_memory/weight_memory_control.sv"
+`include "./../weights/weight_memory_control.sv"
 `include "./../definitions.sv"
 
 module weight_multiplication #(

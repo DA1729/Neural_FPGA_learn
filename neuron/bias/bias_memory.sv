@@ -12,7 +12,7 @@ module bias_memory #(
     output logic [data_bits-1:0] bias_out
 );
 
-    // Only one bias value stored
+    // Only one bias value store
     reg [data_bits-1:0] bias_memory;
 
     // Pretrained mode: load bias from file

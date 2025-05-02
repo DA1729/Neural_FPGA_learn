@@ -24,7 +24,7 @@ module weight_memory #(
         // works as a ROM in the first case
         `ifdef pretrained
             initial begin
-                $readmemb(weight_file, mem); 
+                $readmemb(weight_file, memory); 
             end
         `else       // else read the weight input and write in the given address, basically function as a RAM 
 

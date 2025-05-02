@@ -87,7 +87,7 @@ module weight_memory_control #(
     // instantiating the weight memory module
 
     weight_memory #(.data_bits(data_bits), .num_weights(num_weights), .address_bits(address_bits), .weight_file(weight_file))
-                                         (.clk(clk), .reset(reset), .write_en(write_en), .read_en(read_en), .write_add(write_add), .read_add(read_add),
+                                         weight_mem_inst (.clk(clk), .reset(reset), .write_en(write_en), .read_en(read_en), .write_add(write_add), .read_add(read_add),
                                           .weight_in(weight_in_16bit), .weight_out(weight_out));
 
 

@@ -18,21 +18,21 @@ module bias_memory #(
     // Pretrained mode: load bias from file
     `ifdef pretrained
         initial begin
-            $readmemb(bias_file, memory); // Assumes file has just 1 line
+            $readmemb(bias_file, bias_memory); // Assumes file has just 1 line
         end
     `else
         always @(posedge clk) begin
             if (reset) begin
-                memory <= '0;
+                bias_memory <= '0;
             end else if (write_en) begin
-                memory <= bias_in;
+                bias_memory <= bias_in;
             end
         end
     `endif
 
     always @(posedge clk) begin
         if (read_en) begin
-            bias_out <= memory;
+            bias_out <= bias_memory;
         end
     end
 
